@@ -1,7 +1,7 @@
 # ResAPP
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/luisbr1/ResApp?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/luisbr1/ResApp?style=for-the-badge)
 
 //<img src="exemplo-image.png" alt="img">//
 
