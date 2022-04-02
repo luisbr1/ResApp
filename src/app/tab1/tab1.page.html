@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Usuarios
+    <ion-title class="ion-text-center">
+      Usuarios 
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -21,6 +21,23 @@
     </ion-label>
   </ion-item>
 
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="start" *ngIf="paginaAtual!=1">
+        <ion-button (click)="paginaAnterior(previous)">
+          <ion-icon slot="icon-only" name="caret-back-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons> 
+      
+      <ion-title class="ion-text-center">{{paginaAtual}}/{{total_pages}}</ion-title>    
+
+      <ion-buttons slot="end" *ngIf="paginaAtual!=total_pages">
+        <ion-button (click)="proximaPagina(next)">
+          <ion-icon slot="icon-only" name="return-up-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>

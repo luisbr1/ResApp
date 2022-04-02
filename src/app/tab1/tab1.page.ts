@@ -10,11 +10,29 @@ import { UserService } from '../services/user.service';
 export class Tab1Page implements OnInit {
   users: User[]=[];
   page: number;
-  total_pages: number;
+  total_pages: number ;
+  paginaAtual: number = 1;
+  next: string = "";
+  previous: string = "";
+
   constructor(public UserService : UserService) {}
 
   ngOnInit():void{
     this.buscarUsuario(this.UserService.urlUser);
+  }
+
+  totalPaginas(numero: number) {
+    return Math.ceil(numero / 20);
+  }
+
+  proximaPagina() {
+    this.paginaAtual = this.paginaAtual + 1;
+    this.buscarUsuario(this.UserService.urlUser+ "?page="+this.paginaAtual);
+  }
+
+  paginaAnterior(url: string) {
+    this.paginaAtual = this.paginaAtual - 1;
+    this.buscarUsuario(this.UserService.urlUser+ "?page="+this.paginaAtual);
   }
 
   buscarUsuario(url:string){
